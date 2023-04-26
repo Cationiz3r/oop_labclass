@@ -1,25 +1,22 @@
-import java.util.Scanner;
+package equations;
 
-public class FirstDegreeEquation {
+import java.util.Scanner;
+import equations.LinearStatus;
+
+public class FirstDegree {
 	double a, b;
 
-	public enum EquationStatus {
-		NO_SOLUTION,
-		ANY_SOLUTION,
-		ONE_SOLUTION,
-	}
-
-	public FirstDegreeEquation(double a, double b) {
+	public FirstDegree(double a, double b) {
 		this.a = a;
 		this.b = b;
 	}
 
-	public EquationStatus getStatus() {
+	public LinearStatus getStatus() {
 		if (a == 0 && b != 0)
-			return EquationStatus.NO_SOLUTION;
+			return LinearStatus.NO_SOLUTION;
 		if (a == 0 && b == 0)
-			return EquationStatus.ANY_SOLUTION;
-		return EquationStatus.ONE_SOLUTION;
+			return LinearStatus.ANY_SOLUTION;
+		return LinearStatus.ONE_SOLUTION;
 	}
 
 	public double getSolution() {
@@ -34,7 +31,7 @@ public class FirstDegreeEquation {
 		var b = scanner.nextDouble();
 		scanner.close();
 
-		var eq = new FirstDegreeEquation(a, b);
+		var eq = new FirstDegree(a, b);
 		var status = eq.getStatus();
 		switch(status) {
 		case NO_SOLUTION:
