@@ -27,6 +27,24 @@ public class SystemFirstDegree {
 	public double getX1() { return getDet1() / getDet0(); }
 	public double getX2() { return getDet2() / getDet0(); }
 
+	public void printSolution() {
+		switch(getStatus()) {
+		case NO_SOLUTION:
+			System.out.println("The system of equations has no solution.");
+			break;
+		case ANY_SOLUTION:
+			System.out.println("The system of equations is true for any solutions.");
+			break;
+		case ONE_SOLUTION:
+			System.out.println(
+				"The system has one solution (x1, x2) = (" +
+				getX1() + ", " + getX2() + ")"
+			);
+			break;
+		}
+
+	}
+
 	public static void main(String[] args) {
 		var scanner = new Scanner(System.in);
 		var arr = new double[6];
@@ -39,20 +57,6 @@ public class SystemFirstDegree {
 		scanner.close();
 
 		var sEq = new SystemFirstDegree(arr);
-		var status = sEq.getStatus();
-		switch(status) {
-		case NO_SOLUTION:
-			System.out.println("The system of equations has no solution.");
-			break;
-		case ANY_SOLUTION:
-			System.out.println("The system of equations is true for any solutions.");
-			break;
-		case ONE_SOLUTION:
-			System.out.println(
-					"The system has one solution (x1, x2) = (" +
-					sEq.getX1() + ", " + sEq.getX2() + ")"
-			);
-			break;
-		}
+		sEq.printSolution();
 	}
 }

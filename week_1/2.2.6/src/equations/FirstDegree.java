@@ -23,6 +23,22 @@ public class FirstDegree {
 		return -b / a;
 	}
 
+	public void printSolution() {
+		switch(getStatus()) {
+		case NO_SOLUTION:
+			System.out.println("The equation has no solution.");
+			break;
+		case ANY_SOLUTION:
+			System.out.println("The equation is true for any solutions.");
+			break;
+		case ONE_SOLUTION:
+			System.out.println(
+				"The equation has one solution: x = " + getSolution()
+			);
+			break;
+		}
+	}
+
 	public static void main(String[] args) {
 		var scanner = new Scanner(System.in);
 		System.out.print("a = ");
@@ -32,17 +48,6 @@ public class FirstDegree {
 		scanner.close();
 
 		var eq = new FirstDegree(a, b);
-		var status = eq.getStatus();
-		switch(status) {
-		case NO_SOLUTION:
-			System.out.println("The equation has no solution.");
-			break;
-		case ANY_SOLUTION:
-			System.out.println("The equation is true for any solutions.");
-			break;
-		case ONE_SOLUTION:
-			System.out.println("The equation has one solution: x = " + eq.getSolution());
-			break;
-		}
+		eq.printSolution();
 	}
 }
