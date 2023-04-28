@@ -27,15 +27,18 @@ public class Cart {
 		var found = false;
 		for (int i = 0; i < MAX_NUMBERS_ORDERED; ++i) {
 			if (!found && itemsOrdered[i] == disc) found = true;
-			else if (found && i < MAX_NUMBERS_ORDERED - 1) {
+			if (found && i < MAX_NUMBERS_ORDERED - 1) {
 				itemsOrdered[i] = itemsOrdered[i + 1];
-			} else if (found && i < MAX_NUMBERS_ORDERED) {
+			} else if (found) {
 				itemsOrdered[i] = null;
 			}
 		}
 
 		if (!found) System.out.println("The disc was not in the cart");
-		else System.out.println("The disc has been removed");
+		else {
+			System.out.println("The disc has been removed");
+			qtyOrdered--;
+		}
 	}
 
 	public float totalCost() {
