@@ -10,16 +10,16 @@ public class Aims {
 			19.95f
 		);
 		var dvd2 = new DigitalVideoDisc(
-				"Star Wars",
-				"Science Fiction",
-				"George Lucas",
-				87,
-				24.95f
+			"Star Wars",
+			"Science Fiction",
+			"George Lucas",
+			87,
+			24.95f
 		);
 		var dvd3 = new DigitalVideoDisc(
-				"Aladin",
-				"Animation",
-				18.99f
+			"Aladin",
+			"Animation",
+			18.99f
 		);
 
 		anOrder.addDigitalVideoDisc(dvd1);
