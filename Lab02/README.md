@@ -1,6 +1,18 @@
-## Answers for questions in some exercises
+# Week 2 report
 
-### 8
+## Class diagram
+
+![class_diagram](https://raw.githubusercontent.com/Cationiz3r/oop_labclass/main/Lab02/Design/classDiagram.png)
+
+## Use case diagram
+
+![use_case](https://raw.githubusercontent.com/Cationiz3r/oop_labclass/main/Lab02/Requirement/UseCase.png)
+
+## Reading assignment mindmap
+
+![reading_assigment](https://raw.githubusercontent.com/Cationiz3r/oop_labclass/main/Lab02/ReadingAssignment/AccessorsQuestions.png)
+
+## Exercises questions
 
 > If you create a constructor method to build a DVD by title then create a
 > constructor method to build a DVD by category.
