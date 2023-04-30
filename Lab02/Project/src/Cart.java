@@ -9,6 +9,7 @@ public class Cart {
 	}
 
 	public void addDigitalVideoDisc(DigitalVideoDisc disc) {
+		if (disc == null) return;
 		if (qtyOrdered == MAX_NUMBERS_ORDERED) {
 			System.out.println("The cart is almost full");
 			return;
@@ -19,6 +20,7 @@ public class Cart {
 	}
 
 	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
+		if (disc == null) return;
 		if (qtyOrdered == 0) {
 			System.out.println("The cart is empty");
 			return;
