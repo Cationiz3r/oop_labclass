@@ -27,6 +27,7 @@ public class DigitalVideoDisc {
 		this.length = length;
 	}
 
+	public int getId() { return id; }
 	public String getTitle() { return title; }
 	public String getCategory() { return category; }
 	public String getDirector() { return director; }
