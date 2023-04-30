@@ -1,3 +1,5 @@
+package hust.soict.dsai.lab01;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;

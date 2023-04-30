@@ -1,7 +1,7 @@
-package equations;
+package hust.soict.dsai.lab01.equations;
 
 import java.util.Scanner;
-import equations.LinearStatus;
+import hust.soict.dsai.lab01.equations.LinearStatus;
 
 public class SystemFirstDegree {
 	double a11, a12, a21, a22, b1, b2;

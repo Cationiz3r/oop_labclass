@@ -1,8 +1,8 @@
-package equations;
+package hust.soict.dsai.lab01.equations;
 
 import java.util.Scanner;
 import java.lang.Math;
-import equations.FirstDegree;
+import hust.soict.dsai.lab01.equations.FirstDegree;
 
 public class SecondDegree {
 	double a, b, c;
