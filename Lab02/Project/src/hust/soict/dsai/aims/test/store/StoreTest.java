@@ -1,3 +1,8 @@
+package hust.soict.dsai.aims.test.store;
+
+import hust.soict.dsai.aims.store.Store;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class StoreTest {
 	public static void main(String[] args) {
 		var store = new Store();

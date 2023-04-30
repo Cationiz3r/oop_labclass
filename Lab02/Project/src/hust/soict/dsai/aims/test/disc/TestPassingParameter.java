@@ -1,3 +1,7 @@
+package hust.soict.dsai.aims.test.disc;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 class DVDWrapper {
 	public DigitalVideoDisc dvd;
 
