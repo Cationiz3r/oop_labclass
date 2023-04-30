@@ -77,4 +77,13 @@ public class Cart {
 			}
 		System.out.println("No DVD with that id");
 	}
+	public void searchByTitle(String title) {
+		boolean found = false;
+		for (int i = 0; i < qtyOrdered; ++i)
+			if (itemsOrdered[i].isMatch(title)) {
+				found = true;
+				System.out.println(itemsOrdered[i].toString());
+			}
+		if (!found) System.out.println("No DVD with that title");
+	}
 }
