@@ -33,4 +33,9 @@ public class DigitalVideoDisc {
 	public String getDirector() { return director; }
 	public int getLength() { return length; }
 	public float getCost() { return cost; }
+
+	public String toString() {
+		return "DVD - " + title + " - " + category + " - " + director +
+			" - " + length + ": " + cost + "$";
+	}
 }
