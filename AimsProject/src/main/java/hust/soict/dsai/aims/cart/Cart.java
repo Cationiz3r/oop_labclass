@@ -1,6 +1,7 @@
 package hust.soict.dsai.aims.cart;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import hust.soict.dsai.aims.media.Media;
 
 public class Cart {
@@ -47,6 +48,13 @@ public class Cart {
 			System.out.println(i + 1 + ". " + itemsOrdered.get(i).toString());
 		System.out.println("Total cost: " + totalCost());
 		System.out.println("**************************************************");
+	}
+
+	public void sortItemsByTitle() {
+		Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+	}
+	public void sortItemsByCost() {
+		Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
 	}
 
 	public void searchById(int id) {
