@@ -31,4 +31,9 @@ extends Media {
 		authors.remove(authorName);
 		System.out.println("Author has been removed from the list");
 	}
+
+	@Override
+	public String toString() {
+		return "Book - " + title + " - " + category + ": " + cost + "$";
+	}
 }

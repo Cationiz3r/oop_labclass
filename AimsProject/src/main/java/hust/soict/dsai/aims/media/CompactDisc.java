@@ -35,6 +35,12 @@ implements Playable {
 		tracks.remove(track);
 	}
 
+	@Override
+	public String toString() {
+		return "Compact disc - " + title + " - " + category + " - " + director +
+			" - " + length + " - " + artist + ": " + cost + "$";
+	}
+
 	public void play() {
 		System.out.println("Playing compact disc: " + title);
 		for (var track: tracks) track.play();

@@ -7,6 +7,7 @@ implements Playable {
 		super(title, category, director, length, cost);
 	}
 
+	@Override
 	public String toString() {
 		return "DVD - " + title + " - " + category + " - " + director +
 			" - " + length + ": " + cost + "$";

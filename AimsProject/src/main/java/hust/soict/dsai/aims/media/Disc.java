@@ -13,4 +13,10 @@ extends Media {
 
 	public String getDirector() { return director; }
 	public int getLength() { return length; }
+
+	@Override
+	public String toString() {
+		return "Disc - " + title + " - " + category + " - " + director +
+			" - " + length + ": " + cost + "$";
+	}
 }
