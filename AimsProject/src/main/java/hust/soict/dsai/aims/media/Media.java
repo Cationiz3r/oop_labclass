@@ -20,6 +20,12 @@ public abstract class Media {
 	public String getCategory() { return category; }
 	public float getCost() { return cost; }
 
+	@Override
+	public boolean equals(Object obj) {
+		Media media = (Media)obj;
+		return title == media.title;
+	}
+
 	public void tryPlay() {
 		if (!(this instanceof Playable)) {
 			System.out.println("Item is not playable");
