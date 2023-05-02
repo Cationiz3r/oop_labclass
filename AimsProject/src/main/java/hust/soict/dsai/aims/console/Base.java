@@ -20,6 +20,20 @@ public abstract class Base {
 	protected abstract void displayInfo();
 	protected abstract void handleChoice(int choice);
 
+	private void handleRawInput(String input) {
+		try {
+			int choice = Integer.parseInt(input);
+			if (choice == 0) {
+				inLoop = false;
+				return;
+			}
+			handleChoice(choice);
+		} catch (NumberFormatException e) {
+			System.out.print("\nInvalid choice!");
+			scanner.next();
+		}
+	}
+
 	public void display() {
 		while (inLoop) {
 			System.out.print("\033[H\033[2J"); // Clear screen
@@ -33,7 +47,7 @@ public abstract class Base {
 			System.out.println("---------------------------------");
 			System.out.print("Please choose a number: ");
 
-			handleChoice(scanner.nextInt());
+			handleRawInput(scanner.next());
 		}
 	}
 }
