@@ -42,7 +42,7 @@ public abstract class Media {
 	}
 
 	public boolean matchId(int id) { return this.id == id; }
-	public boolean matchTitle(String title) { return this.title == title; }
+	public boolean matchTitle(String title) { return this.title.equals(title); }
 
 	@Override
 	public abstract String toString();
