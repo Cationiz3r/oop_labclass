@@ -1,5 +1,6 @@
 package hust.soict.dsai.aims.console;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import hust.soict.dsai.aims.cart.Cart;
@@ -12,7 +13,7 @@ public abstract class Base {
 	protected Scanner scanner;
 	protected List<String> options;
 
-	Base(Store store, Cart cart, Scanner scanner) {
+	protected Base(Store store, Cart cart, Scanner scanner) {
 		this.store = store;
 		this.cart = cart;
 		this.scanner = scanner;
@@ -27,17 +28,18 @@ public abstract class Base {
 	protected abstract void displayInfo();
 	protected abstract void handleChoice(int choice);
 
-	private void handleRawInput(String input) {
+	private void handleRawInput() {
 		try {
-			int choice = Integer.parseInt(input);
+			int choice = scanner.nextInt();
+			scanner.nextLine(); // Consume newline char
 			if (choice == 0) {
 				inLoop = false;
 				return;
 			}
 			handleChoice(choice);
-		} catch (NumberFormatException e) {
+		} catch (InputMismatchException e) {
 			System.out.print("\nInvalid choice!");
-			scanner.next();
+			scanner.nextLine();
 		}
 	}
 
@@ -54,7 +56,7 @@ public abstract class Base {
 			System.out.println("---------------------------------");
 			System.out.print("Please choose a number: ");
 
-			handleRawInput(scanner.next());
+			handleRawInput();
 		}
 	}
 }

@@ -26,7 +26,6 @@ extends Base {
 		Media item = null;
 		if (choice <= 3) {
 			System.out.print("Enter title of item: ");
-			scanner.nextLine();
 			var search = scanner.nextLine();
 			item = store.searchByTitle(search.trim());
 
