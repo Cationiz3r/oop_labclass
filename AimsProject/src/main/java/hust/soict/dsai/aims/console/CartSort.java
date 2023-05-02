@@ -20,5 +20,15 @@ extends Base {
 
 	@Override
 	protected void handleChoice(int choice) {
+		switch(choice) {
+		case 1:
+			cart.sortItemsByTitle();
+			break;
+		case 2:
+			cart.sortItemsByCost();
+			break;
+		}
+
+		exit();
 	}
 }
