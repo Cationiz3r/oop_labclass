@@ -25,16 +25,13 @@ extends Base {
 	protected void handleChoice(int choice) {
 		switch(choice) {
 		case 1:
-			var sMenu = new StoreMenu(store, cart, scanner);
-			sMenu.display();
+			new StoreMenu(this).display();
 			break;
 		case 2:
-			var sMMenu = new StoreManageMenu(store, cart, scanner);
-			sMMenu.display();
+			new StoreManageMenu(this).display();
 			break;
 		case 3:
-			var cMenu = new CartMenu(store, cart, scanner);
-			cMenu.display();
+			new CartMenu(this).display();
 			break;
 		}
 	}

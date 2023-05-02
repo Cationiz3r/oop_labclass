@@ -22,6 +22,10 @@ extends Base {
 
 	@Override
 	protected void handleChoice(int choice) {
-
+		switch(choice) {
+			case 4:
+				new CartMenu(this).display();
+				break;
+		}
 	}
 }
