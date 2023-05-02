@@ -23,6 +23,12 @@ extends Base {
 
 	@Override
 	protected void handleChoice(int choice) {
-
+		switch(choice) {
+		case 1:
+			new CartFilter(this).display();
+			break;
+		case 2:
+			new CartSort(this).display();
+			break;
 	}
 }
