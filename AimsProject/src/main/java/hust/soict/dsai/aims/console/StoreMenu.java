@@ -38,6 +38,13 @@ extends Base {
 		}
 
 		switch(choice) {
+			case 1:
+				new StoreDetailMenu(this, item).display();
+				break;
+			case 2:
+				cart.addMedia(item);
+				scanner.nextLine();
+				break;
 			case 4:
 				new CartMenu(this).display();
 				break;
