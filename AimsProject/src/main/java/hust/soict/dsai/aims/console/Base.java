@@ -15,6 +15,7 @@ public abstract class Base {
 	Base(Store store, Cart cart, Scanner scanner) {
 		this.store = store;
 		this.cart = cart;
+		this.scanner = scanner;
 	}
 
 	protected abstract void displayInfo();
