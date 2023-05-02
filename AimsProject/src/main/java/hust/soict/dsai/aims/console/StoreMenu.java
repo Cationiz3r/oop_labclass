@@ -1,6 +1,7 @@
 package hust.soict.dsai.aims.console;
 
 import java.util.Arrays;
+import hust.soict.dsai.aims.media.Media;
 
 public class StoreMenu
 extends Base {
@@ -22,6 +23,20 @@ extends Base {
 
 	@Override
 	protected void handleChoice(int choice) {
+		Media item = null;
+		if (choice <= 3) {
+			System.out.print("Enter title of item: ");
+			scanner.nextLine();
+			var search = scanner.nextLine();
+			item = store.searchByTitle(search.trim());
+
+			if (item == null) {
+				System.out.println("\nNo item with that title!");
+				scanner.nextLine();
+				return;
+			}
+		}
+
 		switch(choice) {
 			case 4:
 				new CartMenu(this).display();
