@@ -14,7 +14,8 @@ extends Base {
 
 	@Override
 	protected void displayInfo() {
-
+		store.print();
+		System.out.println();
 	}
 
 	@Override
