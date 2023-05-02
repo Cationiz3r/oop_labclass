@@ -3,9 +3,9 @@ package hust.soict.dsai.aims.console;
 import java.util.Arrays;
 import hust.soict.dsai.aims.media.Media;
 
-public class StoreMenu
+public class Store
 extends Base {
-	public StoreMenu(Base menu) {
+	public Store(Base menu) {
 		super(menu);
 		options = Arrays.asList(
 			"See a media’s details",
@@ -38,7 +38,7 @@ extends Base {
 
 		switch(choice) {
 			case 1:
-				new StoreDetailMenu(this, item).display();
+				new StoreDetail(this, item).display();
 				break;
 			case 2:
 				cart.addMedia(item);
@@ -48,7 +48,7 @@ extends Base {
 				item.tryPlay();
 				scanner.nextLine();
 			case 4:
-				new CartMenu(this).display();
+				new Cart(this).display();
 				break;
 		}
 	}

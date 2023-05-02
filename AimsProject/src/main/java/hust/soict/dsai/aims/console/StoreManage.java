@@ -2,22 +2,19 @@ package hust.soict.dsai.aims.console;
 
 import java.util.Arrays;
 
-public class CartMenu
+public class StoreManage
 extends Base {
-	public CartMenu(Base menu) {
+	public StoreManage(Base menu) {
 		super(menu);
 		options = Arrays.asList(
-			"Filter medias in cart",
-			"Sort medias in cart",
-			"Remove media from cart",
-			"Play a media",
-			"Place order"
+			"Add media",
+			"Remove media"
 		);
 	}
 
 	@Override
 	protected void displayInfo() {
-		cart.print();
+		store.print();
 		System.out.println();
 	}
 

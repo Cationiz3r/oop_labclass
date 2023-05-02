@@ -3,11 +3,11 @@ package hust.soict.dsai.aims.console;
 import java.util.Arrays;
 import hust.soict.dsai.aims.media.Media;
 
-public class StoreDetailMenu
+public class StoreDetail
 extends Base {
 	private Media item;
 
-	public StoreDetailMenu(Base menu, Media item) {
+	public StoreDetail(Base menu, Media item) {
 		super(menu);
 		this.item = item;
 		options = Arrays.asList(

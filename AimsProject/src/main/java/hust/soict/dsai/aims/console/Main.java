@@ -2,12 +2,14 @@ package hust.soict.dsai.aims.console;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.store.Store;
 
-public class MainMenu
+public class Main
 extends Base {
-	public MainMenu(Store store, Cart cart, Scanner scanner) {
+	public Main(
+		hust.soict.dsai.aims.store.Store store,
+		hust.soict.dsai.aims.cart.Cart cart,
+		Scanner scanner
+	) {
 		super(store, cart, scanner);
 		options = Arrays.asList(
 			"View store",
@@ -25,13 +27,13 @@ extends Base {
 	protected void handleChoice(int choice) {
 		switch(choice) {
 		case 1:
-			new StoreMenu(this).display();
+			new Store(this).display();
 			break;
 		case 2:
-			new StoreManageMenu(this).display();
+			new StoreManage(this).display();
 			break;
 		case 3:
-			new CartMenu(this).display();
+			new Cart(this).display();
 			break;
 		}
 	}
