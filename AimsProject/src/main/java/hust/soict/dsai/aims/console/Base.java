@@ -24,6 +24,7 @@ public abstract class Base {
 		this.scanner = menu.scanner;
 	}
 
+	protected void exit() { inLoop = false; }
 
 	protected abstract void displayInfo();
 	protected abstract void handleChoice(int choice);
