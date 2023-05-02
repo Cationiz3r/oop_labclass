@@ -24,5 +24,14 @@ extends Base {
 
 	@Override
 	protected void handleChoice(int choice) {
+		switch(choice) {
+			case 1:
+				cart.addMedia(item);
+				scanner.nextLine();
+				break;
+			case 2:
+				item.tryPlay();
+				break;
+		}
 	}
 }
