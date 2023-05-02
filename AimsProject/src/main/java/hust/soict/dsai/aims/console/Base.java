@@ -17,6 +17,12 @@ public abstract class Base {
 		this.cart = cart;
 		this.scanner = scanner;
 	}
+	protected Base(Base menu) {
+		this.store = menu.store;
+		this.cart = menu.cart;
+		this.scanner = menu.scanner;
+	}
+
 
 	protected abstract void displayInfo();
 	protected abstract void handleChoice(int choice);
