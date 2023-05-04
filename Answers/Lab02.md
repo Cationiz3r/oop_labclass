@@ -2,15 +2,15 @@
 
 ## Class diagram
 
-![class_diagram](https://raw.githubusercontent.com/Cationiz3r/oop_labclass/main/Lab02/Design/classDiagram.png)
+![class_diagram](../AimsProject/Design/class.png)
 
 ## Use case diagram
 
-![use_case](https://raw.githubusercontent.com/Cationiz3r/oop_labclass/main/Lab02/Requirement/UseCase.png)
+![use_case](../AimsProject/Requirement/usecase.png)
 
 ## Reading assignment mindmap
 
-![reading_assigment](https://raw.githubusercontent.com/Cationiz3r/oop_labclass/main/Lab02/ReadingAssignment/AccessorsQuestions.png)
+![reading_assigment](Mindmap.png)
 
 ## Exercises questions
 
