@@ -45,6 +45,9 @@ extends Base {
 				cart.addMedia(item);
 				scanner.nextLine();
 				break;
+			case 3:
+				item.tryPlay();
+				scanner.nextLine();
 			case 4:
 				new CartMenu(this).display();
 				break;
