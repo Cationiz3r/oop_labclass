@@ -34,4 +34,7 @@ public abstract class Media {
 		var playable = (Playable)this;
 		playable.play();
 	}
+
+	public boolean matchId(int id) { return this.id == id; }
+	public boolean matchTitle(String title) { return this.title == title; }
 }
