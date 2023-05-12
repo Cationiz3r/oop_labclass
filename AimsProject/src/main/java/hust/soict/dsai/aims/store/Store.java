@@ -27,4 +27,10 @@ public class Store {
 		items.remove(media);
 		System.out.println("The item has been removed");
 	}
+
+	public void print() {
+		System.out.println("Store:\nID | Title - Category - Extra: Cost");
+		for (Media item: items)
+			System.out.println(item.getId() + " | " + item.toString());
+	}
 }
