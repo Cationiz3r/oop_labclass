@@ -1,6 +1,7 @@
 package hust.soict.dsai.aims.console;
 
 import java.util.Arrays;
+import hust.soict.dsai.aims.media.Media;
 
 public class CartFilter
 extends Base {
@@ -20,5 +21,13 @@ extends Base {
 
 	@Override
 	protected void handleChoice(int choice) {
+		Media item = null;
+
+		switch(choice) {
+		case 1:
+			break;
+		case 2:
+			break;
+		}
 	}
 }
