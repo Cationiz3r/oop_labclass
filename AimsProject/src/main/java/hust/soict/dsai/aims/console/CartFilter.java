@@ -26,11 +26,12 @@ extends Base {
 		switch(choice) {
 		case 1:
 			System.out.print("Enter item's ID: ");
+			int id = -1;
 			try {
-				int id = scanner.nextInt();
-				scanner.nextLine(); // Consume newline char
-				item = cart.searchById(id);
+				id = scanner.nextInt();
 			} catch (InputMismatchException e) {}
+			scanner.nextLine(); // Consume newline char
+			item = cart.searchById(id);
 			break;
 		case 2:
 			System.out.print("Enter title of item: ");
