@@ -31,5 +31,11 @@ public class CartTest {
 
 		// Test print method
 		cart.print();
+
+		// Test search methods
+		cart.searchById(1);
+		cart.searchByTitle("Aladin");
+		cart.searchById(99);
+		cart.searchByTitle("The Matrix");
 	}
 }

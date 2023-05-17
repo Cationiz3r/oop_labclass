@@ -34,6 +34,10 @@ public class DigitalVideoDisc {
 	public int getLength() { return length; }
 	public float getCost() { return cost; }
 
+	public boolean isMatch(String title) {
+		return this.title == title;
+	}
+
 	public String toString() {
 		return "DVD - " + title + " - " + category + " - " + director +
 			" - " + length + ": " + cost + "$";
