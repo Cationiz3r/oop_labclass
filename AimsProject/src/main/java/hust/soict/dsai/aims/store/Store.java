@@ -1,45 +1,30 @@
 package hust.soict.dsai.aims.store;
 
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import java.util.ArrayList;
+import hust.soict.dsai.aims.media.Media;
 
 public class Store {
-	public static final int MAX_ITEMS = 100;
-	private DigitalVideoDisc itemsInStore[] =
-		new DigitalVideoDisc[MAX_ITEMS];
-	private int itemsCount = 0;
+	private ArrayList<Media> items = new ArrayList<Media>();
 
-	public void addDVD(DigitalVideoDisc disc) {
-		if (disc == null) return;
-		if (itemsCount == MAX_ITEMS) {
-			System.out.println("The store is full");
+	public void addMedia(Media media) {
+		if (items.contains(media)) {
+			System.out.println("The item is already in the store");
 			return;
 		}
-		itemsInStore[itemsCount] = disc;
-		itemsCount++;
-		System.out.println("The disc has been added");
+		items.add(media);
+		System.out.println("The item has been added");
 	}
 
-	public void removeDVD(DigitalVideoDisc disc) {
-		if (disc == null) return;
-		if (itemsCount == 0) {
+	public void removeMedia(Media media) {
+		if (items.size() == 0) {
 			System.out.println("The store is empty");
 			return;
 		}
-
-		var found = false;
-		for (int i = 0; i < MAX_ITEMS; ++i) {
-			if (!found && itemsInStore[i] == disc) found = true;
-			if (found && i < MAX_ITEMS - 1) {
-				itemsInStore[i] = itemsInStore[i + 1];
-			} else if (found) {
-				itemsInStore[i] = null;
-			}
+		if (!items.contains(media)) {
+			System.out.println("The item is not in the store");
+			return;
 		}
-
-		if (!found) System.out.println("The disc was not in the store");
-		else {
-			System.out.println("The disc has been removed");
-			itemsCount--;
-		}
+		items.remove(media);
+		System.out.println("The item has been removed");
 	}
 }
