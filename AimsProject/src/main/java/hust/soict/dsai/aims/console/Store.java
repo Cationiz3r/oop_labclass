@@ -47,6 +47,7 @@ extends Base {
 			case 3:
 				item.tryPlay();
 				scanner.nextLine();
+				break;
 			case 4:
 				new Cart(this).display();
 				break;
