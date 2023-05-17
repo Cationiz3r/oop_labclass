@@ -1,14 +1,11 @@
 package hust.soict.dsai.aims.media;
 
-public class DigitalVideoDisc {
+public class DigitalVideoDisc
+extends Media {
 	private static int nbDigitalVideoDiscs = 0;
 
-	private int id;
-	private String title;
-	private String category;
 	private String director;
 	private int length;
-	private float cost;
 
 	public DigitalVideoDisc(String title) {
 		this.title = title;
@@ -31,12 +28,8 @@ public class DigitalVideoDisc {
 
 	public void setTitle(String title) { this.title = title; }
 
-	public int getId() { return id; }
-	public String getTitle() { return title; }
-	public String getCategory() { return category; }
 	public String getDirector() { return director; }
 	public int getLength() { return length; }
-	public float getCost() { return cost; }
 
 	public boolean isMatch(String title) {
 		return this.title == title;
