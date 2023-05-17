@@ -6,6 +6,10 @@ public class Book
 extends Media {
 	private ArrayList<String> authors = new ArrayList<String>();
 
+	public Book(String title, String category, float cost) {
+		super(title, category, cost);
+	}
+
 	public ArrayList<String> getAuthors() { return authors; }
 
 	public boolean isAuthor(String authorName) {
