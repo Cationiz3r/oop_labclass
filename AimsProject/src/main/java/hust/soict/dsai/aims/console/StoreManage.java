@@ -26,6 +26,7 @@ extends Base {
 			break;
 		case 2:
 			Media item = null;
+			System.out.print("Enter item title: ");
 			var search = scanner.nextLine();
 			item = store.searchByTitle(search.trim());
 
