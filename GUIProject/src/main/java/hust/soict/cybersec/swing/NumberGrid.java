@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.ComponentOrientation;
 import java.awt.Container;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -14,6 +16,13 @@ extends JFrame {
 	private JButton[] btnNumbers = new JButton[10];
 	private JButton btnDelete, btnReset;
 	private JTextField tfDisplay;
+
+	private class ButtonListener
+	implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+		}
+	}
 
 	public NumberGrid() {
 		Container cp = getContentPane();
