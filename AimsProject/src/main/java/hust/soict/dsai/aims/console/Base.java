@@ -43,19 +43,23 @@ public abstract class Base {
 			System.out.println("---------------------------------");
 			System.out.print("Please choose a number: ");
 
+			int choice = -1;
 			try {
-				int choice = scanner.nextInt();
-				scanner.nextLine(); // Consume newline char
-				if (choice == 0) {
-					inLoop = false;
-					return;
-				}
-				System.out.println(); // Separator
-				handleChoice(choice);
-			} catch (InputMismatchException e) {
-				System.out.print("\nInvalid choice!");
+				choice = scanner.nextInt();
+			} catch (InputMismatchException e) {}
+			scanner.nextLine(); // Consume newline char
+
+			if (choice < 0 || choice > options.size()) {
+				System.out.println("\nInvalid choice!");
 				scanner.nextLine();
+				continue;
 			}
+			if (choice == 0) {
+				inLoop = false;
+				continue;
+			}
+			System.out.println(); // Separator
+			handleChoice(choice);
 		}
 	}
 }
