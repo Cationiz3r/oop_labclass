@@ -19,4 +19,13 @@ public abstract class Media {
 	public String getTitle() { return title; }
 	public String getCategory() { return category; }
 	public float getCost() { return cost; }
+
+	public void tryPlay() {
+		if (!(this instanceof Playable)) {
+			System.out.println("Item is not playable");
+			return;
+		}
+		var playable = (Playable)this;
+		playable.play();
+	}
 }
