@@ -20,7 +20,7 @@ extends Base {
 
 	@Override
 	protected void displayInfo() {
-		System.out.println("AIMS\n");
+		System.out.println("AIMS");
 	}
 
 	@Override

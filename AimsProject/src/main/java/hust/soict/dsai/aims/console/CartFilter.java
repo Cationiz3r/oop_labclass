@@ -17,7 +17,6 @@ extends Base {
 	@Override
 	protected void displayInfo() {
 		cart.print();
-		System.out.println();
 	}
 
 	@Override

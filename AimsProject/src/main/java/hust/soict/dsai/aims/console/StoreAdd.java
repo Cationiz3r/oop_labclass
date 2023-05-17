@@ -15,7 +15,7 @@ extends Base {
 
 	@Override
 	protected void displayInfo() {
-		System.out.println("Add a media:\n");
+		System.out.println("Add a media:");
 	}
 
 	@Override

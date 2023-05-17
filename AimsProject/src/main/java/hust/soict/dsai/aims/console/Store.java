@@ -18,7 +18,6 @@ extends Base {
 	@Override
 	protected void displayInfo() {
 		store.print();
-		System.out.println();
 	}
 
 	@Override
@@ -30,7 +29,7 @@ extends Base {
 			item = store.searchByTitle(search.trim());
 
 			if (item == null) {
-				System.out.println("\nNo item with that title!");
+				System.out.println("No item with that title!");
 				scanner.nextLine();
 				return;
 			}

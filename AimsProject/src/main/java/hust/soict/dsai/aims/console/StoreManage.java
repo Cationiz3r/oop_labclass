@@ -16,7 +16,6 @@ extends Base {
 	@Override
 	protected void displayInfo() {
 		store.print();
-		System.out.println();
 	}
 
 	@Override
@@ -30,10 +29,8 @@ extends Base {
 			var search = scanner.nextLine();
 			item = store.searchByTitle(search.trim());
 
-			if (item == null)
-				System.out.println("\nNo item with that title!");
-			else
-				System.out.println("Item has been removed!");
+			if (item == null) System.out.println("No item with that title!");
+			else System.out.println("Item has been removed!");
 
 			store.removeMedia(item);
 		}
