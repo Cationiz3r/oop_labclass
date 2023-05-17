@@ -67,4 +67,9 @@ public class Cart {
 			if (item.matchTitle(title)) return item;
 		return null;
 	}
+
+	public void placeOrder() {
+		itemsOrdered.clear();
+		System.out.println("Your order has been placed!");
+	}
 }
