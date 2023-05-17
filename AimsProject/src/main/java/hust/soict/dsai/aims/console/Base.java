@@ -29,27 +29,13 @@ public abstract class Base {
 	protected abstract void displayInfo();
 	protected abstract void handleChoice(int choice);
 
-	private void handleRawInput() {
-		try {
-			int choice = scanner.nextInt();
-			scanner.nextLine(); // Consume newline char
-			if (choice == 0) {
-				inLoop = false;
-				return;
-			}
-			handleChoice(choice);
-		} catch (InputMismatchException e) {
-			System.out.print("\nInvalid choice!");
-			scanner.nextLine();
-		}
-	}
-
 	public void display() {
 		while (inLoop) {
 			System.out.print("\033[H\033[2J"); // Clear screen
 			System.out.flush();
 
 			displayInfo();
+			System.out.println(); // Separator
 			System.out.println("Options:\n---------------------------------");
 			for (int i = 0; i < options.size(); ++i)
 				System.out.println(i + 1 + ". " + options.get(i));
@@ -57,7 +43,19 @@ public abstract class Base {
 			System.out.println("---------------------------------");
 			System.out.print("Please choose a number: ");
 
-			handleRawInput();
+			try {
+				int choice = scanner.nextInt();
+				scanner.nextLine(); // Consume newline char
+				if (choice == 0) {
+					inLoop = false;
+					return;
+				}
+				System.out.println(); // Separator
+				handleChoice(choice);
+			} catch (InputMismatchException e) {
+				System.out.print("\nInvalid choice!");
+				scanner.nextLine();
+			}
 		}
 	}
 }
