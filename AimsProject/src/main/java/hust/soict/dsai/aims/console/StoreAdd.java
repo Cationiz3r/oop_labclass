@@ -109,5 +109,8 @@ extends Base {
 			store.addMedia(new DigitalVideoDisc(title, category, director, length, cost));
 			break;
 		}
+
+		System.out.println("\nItem has been added to the store.");
+		scanner.nextLine();
 	}
 }
