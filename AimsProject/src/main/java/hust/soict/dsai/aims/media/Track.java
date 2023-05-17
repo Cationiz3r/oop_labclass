@@ -13,6 +13,12 @@ implements Playable {
 	public String getTitle() { return title; }
 	public int getLength() { return length; }
 
+	@Override
+	public boolean equals(Object obj) {
+		Track track = (Track)obj;
+		return title == track.title && length == track.length;
+	}
+
 	public void play() {
 		System.out.println("Play track: " + title);
 		System.out.println("Track length: " + length);
