@@ -1,11 +1,8 @@
 package hust.soict.dsai.aims.media;
 
 public class DigitalVideoDisc
-extends Media {
+extends Disc {
 	private static int nbDigitalVideoDiscs = 0;
-
-	private String director;
-	private int length;
 
 	public DigitalVideoDisc(String title) {
 		this.title = title;
@@ -27,9 +24,6 @@ extends Media {
 	}
 
 	public void setTitle(String title) { this.title = title; }
-
-	public String getDirector() { return director; }
-	public int getLength() { return length; }
 
 	public boolean isMatch(String title) {
 		return this.title == title;
