@@ -61,4 +61,8 @@ extends JFrame {
 		btnReset.addActionListener(listener);
 		panelButtons.add(btnReset);
 	}
+
+	public static void main(String[] args) {
+		new NumberGrid();
+	}
 }
