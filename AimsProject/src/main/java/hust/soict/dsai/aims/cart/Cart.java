@@ -57,21 +57,14 @@ public class Cart {
 		Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
 	}
 
-	public void searchById(int id) {
+	public Media searchById(int id) {
 		for (Media item: itemsOrdered)
-			if (item.matchId(id)) {
-				System.out.println(item.toString());
-				return;
-			}
-		System.out.println("No DVD with that id");
+			if (item.matchId(id)) return item;
+		return null;
 	}
-	public void searchByTitle(String title) {
-		boolean found = false;
+	public Media searchByTitle(String title) {
 		for (Media item: itemsOrdered)
-			if (item.matchTitle(title)) {
-				found = true;
-				System.out.println(item.toString());
-			}
-		if (!found) System.out.println("No DVD with that title");
+			if (item.matchTitle(title)) return item;
+		return null;
 	}
 }
