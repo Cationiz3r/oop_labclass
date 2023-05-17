@@ -33,4 +33,10 @@ public class Store {
 		for (Media item: items)
 			System.out.println(item.getId() + " | " + item.toString());
 	}
+
+	public Media searchByTitle(String title) {
+		for (Media item: items)
+			if (item.matchTitle(title)) return item;
+		return null;
+	}
 }
