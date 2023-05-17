@@ -30,6 +30,7 @@ extends Base {
 				break;
 			case 2:
 				item.tryPlay();
+				scanner.nextLine();
 				break;
 		}
 	}
