@@ -21,6 +21,17 @@ extends JFrame {
 	implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			var button = e.getActionCommand();
+			if (button.charAt(0) >= '0' && button.charAt(0) <= '9') {
+				tfDisplay.setText(tfDisplay.getText() + button);
+			} else if (button.equals("DEL")) {
+				// Handle delete (last char)
+				var display = tfDisplay.getText();
+				tfDisplay.setText(display.substring(0, display.length() - 1));
+			} else {
+				// Handle reset
+				tfDisplay.setText("");
+			}
 		}
 	}
 
