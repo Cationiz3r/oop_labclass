@@ -1,10 +1,13 @@
 package hust.soict.cybersec.aims.store;
 
 import java.util.ArrayList;
+import java.util.List;
 import hust.soict.cybersec.aims.media.Media;
 
 public class Store {
-	private ArrayList<Media> items = new ArrayList<Media>();
+	private List<Media> items = new ArrayList<Media>();
+
+	public List<Media> getItems() { return items; }
 
 	public void addMedia(Media media) {
 		if (items.contains(media)) {

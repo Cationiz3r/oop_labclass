@@ -32,8 +32,11 @@ public abstract class Media {
 		return title == media.title;
 	}
 
+	public boolean isPlayable() {
+		return this instanceof Playable;
+	}
 	public void tryPlay() {
-		if (!(this instanceof Playable)) {
+		if (!isPlayable()) {
 			System.out.println("Item is not playable");
 			return;
 		}
