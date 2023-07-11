@@ -28,7 +28,12 @@ extends JPanel {
 		JPanel container = new JPanel();
 		container.setLayout(new FlowLayout(FlowLayout.CENTER));
 		container.add(new JButton("Add to cart"));
-		if (media.isPlayable()) container.add(new JButton("Play"));
+		var playButton = new JButton("Play");
+		playButton.addActionListener(e -> {
+			var dialog = new PlayDialog(media);
+			dialog.setVisible(true);
+		});
+		if (media.isPlayable()) container.add(playButton);
 
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		add(Box.createVerticalGlue());
