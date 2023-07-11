@@ -3,8 +3,7 @@ package hust.soict.cybersec.aims.media;
 import java.util.ArrayList;
 
 public class CompactDisc
-extends Disc
-implements Playable {
+extends Disc {
 	private String artist;
 	private ArrayList<Track> tracks = new ArrayList<>();
 

@@ -1,5 +1,6 @@
 package hust.soict.cybersec.aims.media;
 
-interface Playable {
+public interface Playable {
 	public void play();
+	public int getLength();
 }

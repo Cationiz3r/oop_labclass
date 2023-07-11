@@ -1,7 +1,8 @@
 package hust.soict.cybersec.aims.media;
 
-public class Disc
-extends Media {
+public abstract class Disc
+extends Media
+implements Playable {
 	protected String director;
 	protected int length;
 
