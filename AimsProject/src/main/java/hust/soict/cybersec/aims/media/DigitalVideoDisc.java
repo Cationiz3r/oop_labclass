@@ -1,8 +1,7 @@
 package hust.soict.cybersec.aims.media;
 
 public class DigitalVideoDisc
-extends Disc
-implements Playable {
+extends Disc {
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
 		super(title, category, director, length, cost);
 	}
