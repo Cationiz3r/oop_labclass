@@ -2,6 +2,7 @@ package hust.soict.cybersec.javafx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -10,6 +11,11 @@ import javafx.scene.shape.Circle;
 public class PainterController {
 	@FXML
 	private Pane drawingAreaPane;
+	@FXML private ToggleGroup tool;
+
+	@FXML
+	void changeTool(ActionEvent event) {
+	}
 
 	@FXML
 	void clearButtonPressed(ActionEvent event) {
