@@ -42,4 +42,13 @@ public class CartScreenController {
 			}
 		});
 	}
+
+	@FXML
+	void onRemovePressed(ActionEvent event) {
+		cart.removeMedia(tblMedia.getSelectionModel().getSelectedItem());
+		if (cart.getItemsOrdered().size() < 1) {
+			btnPlay.setVisible(false);
+			btnRemove.setVisible(false);
+		}
+	}
 }
