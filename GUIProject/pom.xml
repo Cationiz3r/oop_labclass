@@ -41,6 +41,9 @@
 				<groupId>org.openjfx</groupId>
 				<artifactId>javafx-maven-plugin</artifactId>
 				<version>0.0.3</version>
+				<configuration>
+					<mainClass>hust.soict.cybersec.javafx.Painter</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
