@@ -2,10 +2,13 @@ package hust.soict.cybersec.aims.screen;
 
 import hust.soict.cybersec.aims.cart.Cart;
 import hust.soict.cybersec.aims.media.Media;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 
@@ -19,6 +22,9 @@ public class CartScreenController {
 	@FXML private TableColumn<Media, Float> colMediaCost;
 	@FXML private Button btnPlay;
 	@FXML private Button btnRemove;
+	@FXML private TextField tfFilter;
+	@FXML private RadioButton radioBtnFilterID;
+	@FXML private RadioButton radioBtnFilterTitle;
 
 	public CartScreenController(Cart cart) { this.cart = cart; }
 
@@ -37,6 +43,29 @@ public class CartScreenController {
 			btnRemove.setVisible(true);
 			btnPlay.setVisible(selected.isPlayable());
 		});
+
+		tfFilter.textProperty().addListener(observable -> { onFilterChange(); });
+		filterCategory.selectedToggleProperty().addListener((obserble, oldValue, newValue) -> { onFilterChange(); });
+	}
+
+	private void onFilterChange() {
+		// Empty filter
+		if (tfFilter.getText().length() == 0) {
+			tblMedia.setItems(cart.getItemsOrdered());
+			return;
+		}
+
+		var button = (RadioButton)filterCategory.getSelectedToggle();
+		assert(button != null);
+		switch(button.getText()) {
+			default:
+			case "By Title":
+				tblMedia.setItems(cart.filterTitle(tfFilter.getText()));
+				break;
+			case "By ID":
+				tblMedia.setItems(cart.filterId(tfFilter.getText()));
+				break;
+		}
 	}
 
 	@FXML
