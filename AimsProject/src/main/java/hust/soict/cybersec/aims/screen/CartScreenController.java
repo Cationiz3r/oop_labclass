@@ -2,8 +2,6 @@ package hust.soict.cybersec.aims.screen;
 
 import hust.soict.cybersec.aims.cart.Cart;
 import hust.soict.cybersec.aims.media.Media;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -33,13 +31,11 @@ public class CartScreenController {
 
 		btnPlay.setVisible(false);
 		btnRemove.setVisible(false);
-		tblMedia.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Media>() {
-			@Override
-			public void changed(ObservableValue<? extends Media> observable, Media oldValue, Media newValue) {
-				if (newValue == null) return;
-				btnRemove.setVisible(true);
-				btnPlay.setVisible(newValue.isPlayable());
-			}
+		tblMedia.getSelectionModel().selectedItemProperty().addListener(observable -> {
+			var selected = tblMedia.getSelectionModel().getSelectedItem();
+			if (selected == null) return;
+			btnRemove.setVisible(true);
+			btnPlay.setVisible(selected.isPlayable());
 		});
 	}
 
