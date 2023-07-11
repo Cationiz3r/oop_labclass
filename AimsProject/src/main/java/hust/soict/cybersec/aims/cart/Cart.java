@@ -1,12 +1,15 @@
 package hust.soict.cybersec.aims.cart;
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+
 import hust.soict.cybersec.aims.media.Media;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
-	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+	private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
 
 	public void addMedia(Media media) {
 		if (itemsOrdered.size() == MAX_NUMBERS_ORDERED) {
@@ -20,6 +23,8 @@ public class Cart {
 		itemsOrdered.add(media);
 		System.out.println("The disc has been added");
 	}
+
+	public ObservableList<Media> getItemsOrdered() { return itemsOrdered; }
 
 	public void removeMedia(Media media) {
 		if (itemsOrdered.size() == 0) {
