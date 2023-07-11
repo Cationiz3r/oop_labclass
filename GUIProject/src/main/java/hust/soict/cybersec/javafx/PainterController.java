@@ -11,8 +11,7 @@ import javafx.scene.shape.Circle;
 
 public class PainterController {
 	private Color brushColor = Color.BLACK;
-	@FXML
-	private Pane drawingAreaPane;
+	@FXML private Pane drawingAreaPane;
 	@FXML private ToggleGroup tool;
 
 	@FXML
